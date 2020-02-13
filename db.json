@@ -19,6 +19,16 @@
         "enable": false,
         "status": "incomplete"
       }
+    },
+    {
+      "id": 9362.107824203673,
+      "name": "Ajay Bind",
+      "email": "ajay.bind@gmail.com",
+      "password": "123456",
+      "enable2FAuth": {
+        "enable": false,
+        "status": "incomplete"
+      }
     }
   ],
   "claims": [
