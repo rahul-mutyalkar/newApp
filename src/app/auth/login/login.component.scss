@@ -1,0 +1,19 @@
+#loginForm{
+    flex: 1;
+    height: 100vh;
+    // border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    form{
+        width: 70%;
+        #forgotPwd{
+            cursor: pointer;
+            color: #007bff !important;
+        }
+        #loginBtn{
+            float: right;
+        }
+    }
+}

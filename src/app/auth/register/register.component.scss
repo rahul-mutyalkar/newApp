@@ -1,0 +1,15 @@
+#registerForm{
+    flex: 1;
+    height: 100vh;
+    // border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    form{
+        width: 70%;
+        #registerBtn{
+            float: right;
+        }
+    }
+}

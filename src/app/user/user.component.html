@@ -1,0 +1,51 @@
+<div class="container" id="tableContainer">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" *ngFor="let column of columnData">{{column.name || 'N/A'}}
+          <div class="openMenu">
+            <span *ngIf="column.sorting==false" (click)="sortBy(column)">
+              <i class="fa fa-arrow-down">
+              </i>
+            </span>
+            <span *ngIf="column.sorting==true" (click)="sortBy(column)"><i class="fa fa-arrow-up">
+              </i>
+            </span>
+            &nbsp;
+            <span style="padding:0.2rem" (click)="toggleMenu(column)"><i class="fa fa-cog">
+              </i>
+            </span>
+            <ng-container *ngIf="column.openFilter==true">
+              <div class="toolTip">
+                <div class="form-group">
+                  <label>Filter {{column.name | lowercase}}</label>
+                  <ng-multiselect-dropdown [placeholder]="'Select '+column.name" [data]="column.filterList"
+                    [(ngModel)]="column.filterModel" [settings]="dropdownSettings">
+                  </ng-multiselect-dropdown>
+                  <div class="form-group">
+                    <button style="float: left;margin-top: 1rem;" class="btn btn-danger" (click)="filterList(column)"><i
+                        class="fa fa-close"></i></button>
+                    <button style="float: right;margin-top: 1rem;" class="btn btn-primary"
+                      (click)="filterList(column)"><i class="fa fa-check"></i></button>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of inputArray">
+        <th scope="row">{{element.position}}</th>
+        <td>{{element.name}}</td>
+        <td>{{element.weight}}</td>
+        <td>{{element.symbol}}</td>
+        <th scope="row">{{element.position1}}</th>
+        <td>{{element.name1}}</td>
+        <td>{{element.weight1}}</td>
+        <td>{{element.symbol1}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,31 @@
+#mainContainer {
+  flex: 1;
+  // border: 1px solid;
+  flex-direction: row;
+  display: flex;
+  height: 100vh;
+
+  #leftContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    // border: 1px solid;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190619/ourmid/pngtree-colorful-gradient-dreamy-business-corporate-background-image_135286.jpg);
+    background-position: repeat;
+    background-size: cover;
+    .info{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+  }
+
+  #rightContainer {
+    flex: 1;
+    // border: 1px solid;
+  }
+}

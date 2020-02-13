@@ -1,0 +1,33 @@
+<!-- <p>custom-table-treeview works!</p> -->
+<div class="container">
+        <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>UserID</th>
+                    <th>Count</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let client of data">
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <!-- <tr>
+                            <td> <i (click)="toggleNodes(client,'manager')" class="pi" [ngClass]="{'pi-plus' : !client.showManagerList,'pi-minus' : client.showManagerList==true}"></i> 
+                            <p class="tdItem">
+                                    {{client.client_id}}
+                            </p>
+                            </td>
+                            <td>{{client.count}} </td>
+                            <td>{{client.amount}} </td>
+                    </tr>
+                    <tr [hidden]="!client.showManagerList" *ngFor="let manager of client.manager">
+                        <td class="paddingLeft">{{manager.manager_id}} </td>
+                        <td>{{manager.count}} </td>
+                        <td>{{manager.amount}} </td>
+                    </tr> -->
+                 
+                </tbody>
+              </table>
+
+</div>

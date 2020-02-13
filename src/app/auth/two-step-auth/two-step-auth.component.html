@@ -1,0 +1,19 @@
+<h1 style="text-align: center">Two step auth code</h1>
+
+<!-- <img (click)="testOTP()" [src]="barCodeURI"/> -->
+<!-- <img [src]='barCodeURI' (click)="testOTP()"> -->
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <div class="form-group">
+      <label for="">Enter Passcode</label>
+      <input [(ngModel)]="passcode" class="form-control" placeholder="eg. 512364" type="text" name="" id=""
+        maxlength="6">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="submit2FAuth()">
+        Submit
+      </button>
+    </div>
+  </div>
+
+</div>

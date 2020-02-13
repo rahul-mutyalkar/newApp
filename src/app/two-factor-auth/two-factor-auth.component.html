@@ -1,0 +1,56 @@
+<div id="enableTwoFactor">
+  <h3 style="text-align: center">Two Factor Authentication</h3>
+  <ng-container *ngIf="activeUser && activeUser.enable2FAuth">
+    <ng-container *ngIf="activeUser.enable2FAuth.enable==false">
+
+      <p>
+        <i class="fa fa-lock fa-5x"></i>
+      </p>
+      <p>
+        Two factor authentication is not enabled yet.
+        Two-factor authentication adds an additional layer of security to your account by requiring more than just a
+        password to log in. Learn more.
+      </p>
+      <div class="alignBtn">
+        <button class="btn btn-success" (click)="enable2FAuth()">Enable two-factor authentication</button>
+      </div>
+    </ng-container>
+
+  </ng-container>
+
+  <ng-container *ngIf="activeUser && activeUser.enable2FAuth">
+    <div class="alignBarcode"
+      *ngIf="activeUser.enable2FAuth.enable==true && activeUser.enable2FAuth.status=='incomplete'">
+      <!-- <img [src]='barCodeURI'> -->
+      <!-- <a title='Manually pair with GEZDGNBVMNXWIZI' href='https://www.authenticatorapi.com'> -->
+      <span [innerHTML]="barCodeURI"></span>
+      <!-- </a> -->
+      <div class="form-group">
+        <label for="">Enter Passcode</label>
+        <input [(ngModel)]="passcode" class="form-control" placeholder="eg. 512364" type="text" name="" id=""
+          maxlength="6">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" (click)="submit2FAuth()">
+          Submit
+        </button>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="activeUser && activeUser.enable2FAuth">
+    <div class="alignBarcode"
+      *ngIf="activeUser.enable2FAuth.enable==true && activeUser.enable2FAuth.status=='complete'">
+      <p>
+        <i class="fa fa-check-circle fa-5x"></i>
+      </p>
+      <p>
+        Two-Factor Authentication is successfully configured
+      </p>
+      <div class="form-group">
+        <button class="btn btn-danger" (click)="remove2FAuth()">
+          Remove
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</div>

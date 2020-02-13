@@ -1,0 +1,48 @@
+<div class="container" id="registerForm">
+  <p>already have an account? <a routerLink="/auth/login">Login</a></p>
+  <h1>Register Form</h1>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" maxlength="30" class="form-control" id="fullName" aria-describedby="nameHelp"
+        placeholder="Enter Full Name" formControlName="name">
+      <div *ngIf="registerForm.controls.name.invalid && registerForm.controls.name.touched" class="text-danger">
+        <small *ngIf="registerForm.controls.name.errors.required">Full Name address is required.</small>
+        <!-- <small *ngIf="registerForm.controls.name.errors.name">Full Name must be a valid name.</small> -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="registertEmail">Email address</label>
+      <input type="email" class="form-control" id="registertEmail" aria-describedby="emailHelp"
+        placeholder="Enter email" formControlName="email">
+      <div *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched" class="text-danger">
+        <small *ngIf="registerForm.controls.email.errors.required">Email address is required.</small>
+        <small *ngIf="registerForm.controls.email.errors.email">Email must be a valid email address.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+        formControlName="password">
+      <div *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched" class="text-danger">
+        <small *ngIf="registerForm.controls.password.errors.required">Password is required.</small>
+        <small *ngIf="registerForm.controls.password.errors.minlength">Password must be at least 6 characters.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Confirm Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password"
+        formControlName="confPassword">
+      <div *ngIf="registerForm.controls.confPassword.invalid && registerForm.controls.confPassword.touched"
+        class="text-danger">
+        <small *ngIf="registerForm.controls.confPassword.errors.required">Confirm password is required.</small>
+        <small *ngIf="registerForm.controls.confPassword.errors.mustMatch">Password & Confirm Password must
+          match.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <!-- <button id="registerBtn" type="submit" class="btn btn-primary">Submit</button> -->
+      <button id="registerBtn" type="submit" class="btn btn-primary" [disabled]="registerForm.invalid" >Submit</button>
+    </div>
+  </form>
+</div>

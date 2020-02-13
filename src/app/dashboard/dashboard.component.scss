@@ -1,0 +1,100 @@
+// .newSection {
+//   min-height: 50px;
+//   width: 100%;
+//   border: 1px solid;
+// }
+
+// tr {
+//   color: black;
+// }
+
+// tr:nth-child(odd) {
+//   background-color: #dee2e6 !important;
+// }
+
+// tr:nth-child(even) {
+//   background-color: #fff !important;
+// }
+
+// .paddingLeft-2 {
+//   padding-left: 2.5rem;
+// }
+
+// .paddingLeft-3 {
+//   padding-left: 4rem;
+// }
+
+// .paddingLeft-4 {
+//   padding-left: 6.5rem;
+// }
+
+// i {
+//   float: left;
+//   cursor: pointer;
+//   padding: 0.2rem 0.2rem 0 0.2rem;
+// }
+
+// .tdItem {
+//   float: left;
+// }
+
+// .noData {
+
+//   td {
+//     text-align: center;
+//     // width: 150%;
+//   }
+// }
+
+// .container {
+//   //   border: 1px solid;
+//   float: left;
+
+//   .item {
+//     width: 100%;
+//     min-height: 50px;
+//     border: 1px solid;
+//   }
+// }
+// .tableHead{
+//   display: table-header-group;
+// }
+// .tableRow{
+//   display: table-row;
+// }
+// .tableCell {
+//   display: table-cell;
+//   padding: 0 0.5rem;
+//   font-size:0.8rem;
+// }
+
+// .paddingLeft-2{
+//   padding-left:2rem;
+// }
+
+.table-fixed tbody {
+  height: 300px;
+  overflow: auto;
+  width: 100%;
+}
+
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+  display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead > tr > th {
+  float: left;
+  position: relative;
+
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}

@@ -1,0 +1,18 @@
+<div id="wrapper">
+
+  <div class="sidenav">
+    <div class="heading">
+      <h3>iAR App</h3>
+    </div>
+    <a routerLinkActive="activeMenu" [routerLinkActiveOptions]="{exact: true}" routerLink="dashboard"> <i
+        class="fa fa-dashcube"></i> Dashboard</a>
+    <a routerLinkActive="activeMenu" routerLink="admin"><i class="fa fa-pie-chart"></i> Chart</a>
+    <a routerLinkActive="activeMenu" routerLink="user"><i class="fa fa-user"></i> User</a>
+    <a routerLinkActive="activeMenu" routerLink="two-factor-auth"><i class="fa fa-user"></i> Two Factor Auth</a>
+  </div>
+
+  <div class="mainContainer">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
