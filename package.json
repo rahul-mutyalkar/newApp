@@ -22,7 +22,7 @@
     "@angular/router": "~8.2.8",
     "corejs": "^1.0.0",
     "handlebars": "^4.5.3",
-    "highcharts": "^8.0.0",
+    "highcharts": "^9.0.0",
     "highcharts-angular": "^2.4.0",
     "lodash": "^4.17.15",
     "logrocket": "^1.0.5",
